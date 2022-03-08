@@ -30,7 +30,10 @@ export const getStaticProps = ({ params }) => {
   return {
     props: {
       todo
-    }
+    },
+    // 10秒間は古いHTMLページ(キャッシュ)を使用する
+    // 古いキャッシュを返しつつ、サーバーでは再レンダリングを行う
+    revalidate: 10
   }
 }
 

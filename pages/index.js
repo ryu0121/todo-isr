@@ -34,6 +34,7 @@ export const getStaticProps = () => {
     // allTodos: [...] の省略形
     props: {
       allTodos
-    }
+    },
+    revalidate: 10
   }
 }
